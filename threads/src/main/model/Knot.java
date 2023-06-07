@@ -10,7 +10,11 @@ public class Knot {
 
     private Point position;
 
-    public static Object image;
+    public Object image;
+
+    public void setImage(Object image){
+        this.image = image;
+    }
 
     public Point getPosition(){
         return this.position;

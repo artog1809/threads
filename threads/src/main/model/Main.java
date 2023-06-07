@@ -115,7 +115,13 @@ public class Main extends JFrame {
 
     private void  setImages(){
         for (int i = 0; i < level.ball.getKnots().size(); i++){
-            Knot.image = getImage("/knot2.png");
+
+            if (level.ball.getKnots().get(i) instanceof DistanceKnot){
+                System.out.println("!!!!!!!!!!!!!!");
+                level.ball.getKnots().get(i).setImage(getImage("/knotd.png"));
+            } else {
+                level.ball.getKnots().get(i).setImage(getImage("/knot2.png"));
+            }
         }
     }
 
